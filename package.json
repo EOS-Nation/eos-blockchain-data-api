@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "name": "eos-blockchain-data",
+  "version": "1.0.0",
+  "description": "EOS - Blockchain Analytics Data",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "history": "ts-node-esm ./scripts/history.ts"
+  },
+  "author": "Denis Carriere <denis@eosnation.io>",
+  "dependencies": {
+    "@dfuse/client": "0.3.21",
+    "@grpc/proto-loader": "0.7.2",
+    "dotenv": "16.0.1",
+    "grpc": "^1.24.11",
+    "next": "^12.2.5",
+    "protobufjs": "7.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "ws": "8.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "18.7.8",
+    "@types/react": "^18.0.18",
+    "@types/react-dom": "^18.0.6",
+    "@types/ws": "^8.5.3",
+    "ts-node": "^10.9.1",
+    "typescript": "4.7.4"
+  }
+}
