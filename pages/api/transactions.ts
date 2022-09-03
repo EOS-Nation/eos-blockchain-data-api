@@ -63,10 +63,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   }
 }
 
-export function setCache( res: NextApiResponse, cache = 'public, max-age=31536000, immutable' ) {
+export function setCache( res: NextApiResponse, cache = 's-maxage=3600, stale-while-revalidate=86400' ) {
   const headers = {
+      'Access-Control-Allow-Origin': '*',
       'Cache-Control': cache,
-      'Access-Control-Allow-Origin': '*'
   }
   for ( const [key, value] of Object.entries(headers)) {
       res.setHeader(key, value);
