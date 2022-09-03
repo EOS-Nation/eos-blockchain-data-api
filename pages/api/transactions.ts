@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Block } from "../../src/firehose"
-import { __dirname } from "../../src/utils"
 import { streamBlocks, get_blocks } from "../../src/dfuse";
 
 // 2022-08-09T06:00:00Z
