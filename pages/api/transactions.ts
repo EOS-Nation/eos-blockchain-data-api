@@ -55,7 +55,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         cpu_usage: cpuUsageMicroSeconds,
         net_usage: netUsage,
         active_accounts: accounts.size,
-        // accounts: Array.from(accounts).sort(),
+        accounts: Array.from(accounts).sort(),
     });
     // error handling
   } catch (e: any) {
@@ -63,7 +63,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   }
 }
 
-export function setCache( res: NextApiResponse, cache = 's-maxage=1, stale-while-revalidate=59' ) {
+export function setCache( res: NextApiResponse, cache = 's-maxage=86400, stale-while-revalidate=2592000' ) {
   const headers = {
       'Cache-Control': cache,
       'Access-Control-Allow-Origin': '*'
