@@ -33,7 +33,8 @@ export const forkStepEnum = bstreamProto.root.lookupEnum("dfuse.bstream.v1.ForkS
 export const forkStepIrreversible = forkStepEnum.values["STEP_IRREVERSIBLE"]
 
 function loadGrpcPackageDefinition(pkg: any): any {
-    const protoPath = path.resolve(__dirname, "proto", pkg)
+    const src = path.join(process.cwd(), 'src');
+    const protoPath = path.resolve(src, "proto", pkg);
     const proto = protoLoader.loadSync(protoPath, {
         keepCase: true,
         longs: String,
@@ -45,7 +46,8 @@ function loadGrpcPackageDefinition(pkg: any): any {
 }
 
 function loadProto(pkg: any) {
-    const protoPath = path.resolve(__dirname, "proto", pkg)
+    const src = path.join(process.cwd(), 'src');
+    const protoPath = path.resolve(src, "proto", pkg)
     return ProtoBuf.loadSync(protoPath)
 }
 
