@@ -4,7 +4,7 @@ import * as grpc from "@grpc/grpc-js"
 import ProtoBuf from "protobufjs"
 import * as protoLoader from "@grpc/proto-loader"
 import { createDfuseClient, InMemoryApiTokenStore } from "@dfuse/client"
-import { timeout, __dirname } from "./utils"
+import { timeout } from "./utils"
 import { Block } from "./firehose"
 import 'dotenv/config'
 
