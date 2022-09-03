@@ -7,6 +7,7 @@ import { streamBlocks, get_blocks } from "../../src/dfuse";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   setCache(res);
+  res.setHeader('Cache-Control', 'public, s-maxage=86400, immutable');
 
   // params
   const start_date = String(req.query.start_date);
