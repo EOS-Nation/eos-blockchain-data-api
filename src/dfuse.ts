@@ -1,6 +1,6 @@
 import path from "node:path"
 import ws from "ws";
-import grpc from "grpc"
+import * as grpc from "@grpc/grpc-js"
 import ProtoBuf from "protobufjs"
 import * as protoLoader from "@grpc/proto-loader"
 import { createDfuseClient, InMemoryApiTokenStore } from "@dfuse/client"
